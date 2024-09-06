@@ -40,6 +40,21 @@ After doing that run again:
 ~~~bash
 modutil -add "PKCS11_Gemalto" -libfile libIDPrimePKCS11.so -dbdir sql:$HOME/.pki/nssdb -mechanisms FRIENDLY
 ~~~
+
+##### Add Comitex PKCS11 to the security library
+~~~bash
+modutil -add "PKCS11_CV" -libfile /opt/btrustbiss/lib/app/p11_libs/libcvP11.so -dbdir sql:$HOME/.pki/nssdb -mechanisms FRIENDLY
+~~~
+
+- If you get "modutil: function failed SEC_ERROR_BAD_DATABASE: security library: bad database" run the following commands in the terminal:
+~~~bash
+mkdir $HOME/.pki && mkdir $HOME/.pki/nssdb
+~~~
+
+After doing that run again:
+~~~bash
+modutil -add "PKCS11_CV" -libfile /opt/btrustbiss/lib/app/p11_libs/libcvP11.so -dbdir sql:$HOME/.pki/nssdb -mechanisms FRIENDLY
+~~~
 ##### For Chromium Based Browsers
 - Download the automated installer for the security sertificates from [here](https://www.b-trust.bg/attachments/BtrustPrivateFile/29/docs/BTrust-CAs.p12).
 - Go to your browsers settings -> certificates and from **Your certificates** press **Import**.
