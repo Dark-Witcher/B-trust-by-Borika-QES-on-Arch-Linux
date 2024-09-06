@@ -58,7 +58,7 @@ modutil -add "PKCS11_Gemalto" -libfile libIDPrimePKCS11.so -dbdir sql:$HOME/.pki
 - For each certificate mark each **Trust this certificate...** option.
 - Restart your PC, 
 
-##### For  Based Browsers
+##### For Firefox Based Browsers
 - Download the security certificates:
     - [http://ca.b-trust.org/repository/B-TrustRootQCA_DER.crt](http://ca.b-trust.org/repository/B-TrustRootQCA_DER.crt)
     - [http://ca.b-trust.org/repository/B-TrustRootACA_DER.crt](http://ca.b-trust.org/repository/B-TrustRootACA_DER.crt)
