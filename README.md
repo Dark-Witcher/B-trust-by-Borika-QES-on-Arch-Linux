@@ -1,4 +1,4 @@
-# Installing Borical B-trust QES on Arch Linux
+# Installing Borica B-trust QES on Arch Linux
 
  ## This is a step by step guied on how to install the B-trust Qualified Electronic Signature on Arch Linux
 
