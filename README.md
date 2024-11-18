@@ -33,7 +33,7 @@ yay -Sy sac-core sac-gui btrustbiss
 
 ##### Add Gemelto PKCS11 to the security library
 ~~~bash
-modutil -add "PKCS11_Gemalto" -libfile libIDPrimePKCS11.so -dbdir sql:$HOME/.pki/nssdb -mechanisms FRIENDLY
+modutil -add "libIDPrimePKCS11.so" -libfile libIDPrimePKCS11.so -dbdir sql:$HOME/.pki/nssdb -mechanisms FRIENDLY
 ~~~
 
 - If you get "modutil: function failed SEC_ERROR_BAD_DATABASE: security library: bad database" run the following commands in the terminal:
@@ -43,7 +43,7 @@ mkdir $HOME/.pki && mkdir $HOME/.pki/nssdb
 
 After doing that run again:
 ~~~bash
-modutil -add "PKCS11_Gemalto" -libfile libIDPrimePKCS11.so -dbdir sql:$HOME/.pki/nssdb -mechanisms FRIENDLY
+modutil -add "libIDPrimePKCS11.so" -libfile libIDPrimePKCS11.so -dbdir sql:$HOME/.pki/nssdb -mechanisms FRIENDLY
 ~~~
 
 -------------------
