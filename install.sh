@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #Install the Smart Security Card Reader Tools:
-sudo pacman -Sy opensc ccid pcsc-tools pscslite
+sudo pacman -Sy opensc ccid pcsc-tools pcsclite
 
 #Install SafetyNet Authentication and B-trust Biss:
 yay -Sy sac-core sac-gui btrustbiss
