@@ -46,6 +46,11 @@ After doing that run again:
 modutil -add "libIDPrimePKCS11.so" -libfile libIDPrimePKCS11.so -dbdir sql:$HOME/.pki/nssdb -mechanisms FRIENDLY
 ~~~
 
+Then activate the service by running
+~~~bash
+systemctl enable pcscd.service && systemctl start pcscd.service
+~~~
+
 -------------------
 
 ##### For Chromium Based Browsers
