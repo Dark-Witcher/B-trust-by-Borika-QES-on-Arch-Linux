@@ -7,7 +7,13 @@ sudo pacman -Sy opensc ccid pcsc-tools pcsclite
 yay -Sy sac-core sac-gui btrustbiss
 
 #Add Gemelto PKCS11 to the security library
-mkdir $HOME/.pki && mkdir $HOME/.pki/nssdb
+if [ ! -d "$HOME/.pki" ]; then
+    mkdir "$HOME/.pki"
+fi
+
+if [ ! -d "$HOME/.pki/nssdb" ]; then
+    mkdir "$HOME/.pki/nssdb"
+fi
 
 modutil -add "libIDPrimePKCS11.so" -libfile libIDPrimePKCS11.so -dbdir sql:$HOME/.pki/nssdb -mechanisms FRIENDLY
 
